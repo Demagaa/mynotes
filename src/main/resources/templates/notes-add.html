@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Notes Site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5 mb-5">
+    <h1> Create Note </h1>
+    <form action="/notes/add" method="post">
+        <input type="text" name="title" placeholder="Enter the title of the note" class="form-control"><br>
+        <input type="text" name="anons" placeholder="Enter anons of the node" class="form-control"><br>
+        <textarea type="text" name="full_text" placeholder="Enter full text of the note" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+</div>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
