@@ -13,19 +13,17 @@ Using the command line:
 
 1. If you do not already have the software, download MySQL Server and install the product.
 
-2. Change the max_allowed_packet variable to at least 256M to allow storing larger models in the repository. See the official MySQL documentation here for details.
-
-3. From the command line, create the database:
+2. From the command line, create the database:
 
 create database spring_web_notes;
 
-4. Execute the following query to create a new user and grant privileges to the database rapidminer_server:
+3. Execute the following query to create a new user and grant privileges to the database rapidminer_server:
 
 grant all privileges on spring_web_notes.* to rmUser@localhost identified by 'pswd';
 
 With privileges granted, you have finished creating the WebNotes Server database. Record the username, password, and schema name and return to the installation instructions to complete the RapidMiner Server installation.
 
-5. Set up the connectivity setting in application.properties file
+4. Set up the connectivity setting in application.properties file
 
 
 Project status: improvement state
