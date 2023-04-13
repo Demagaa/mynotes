@@ -1,29 +1,24 @@
-Title: My Notes project
+# My Notes project
 
-This project is created mainly to show my ability to work with Spring Boot.
+This project is created to show my ability to work with Spring Boot.
 The application enables the user to manage his notes. User is able to add, delete and edit his notes in user-friendly graphical interface
 
-Technologies: Spring Boot, local MySQL database, Bootstrap, Java 17
+## Technologies
 
-Launch: 
+Java 17, Spring Boot, Data JPA, MySQL, Bootstrap, Maven, Docker
 
-In order to work properly program needs local MySQL database set up:
+## Launch:
 
-Using the command line:
+Interaction with the service is implemented via web browser (http://localhost:8080/)
 
-1. If you do not already have the software, download MySQL Server and install the product.
+Program needs MySQL database to be set up:
 
-2. From the command line, create the database:
+Database is dockerized, run compose command in INFO/db-docker folder, this will configure DB container with some sample data:
 
-create database spring_web_notes;
+`docker compose up`
 
-3. Execute the following query to create a new user and grant privileges to the database rapidminer_server:
+Alternatively you can run .sql script located in db-docker/init folder and configure DB on your local server. 
+Connectivity setting can be adjusted application.properties file (localhost:3308 and root account used by default).
 
-grant all privileges on spring_web_notes.* to rmUser@localhost identified by 'pswd';
-
-With privileges granted, you have finished creating the WebNotes Server database. Record the username, password, and schema name and return to the installation instructions to complete the RapidMiner Server installation.
-
-4. Set up the connectivity setting in application.properties file
-
-
-Project status: improvement state
+## Project status
+Improving stage
